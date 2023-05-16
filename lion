@@ -1,0 +1,33 @@
+lion a1,b1,c;
+apple [] aa;
+choonsik a,b;
+void setup() {
+  size(800, 600);
+  aa = new apple[2];
+  for (int i=0; i<2; i++) {
+    aa[i] = new apple();
+      a1 = new lion();
+  b1 = new lion();
+  c = new lion();
+  }
+
+a = new choonsik();
+  b = new choonsik(400.,200.,120.);
+}
+void draw(){
+  background(0,255,255);  
+  aa[0].act();
+  aa[1].act();
+  aa[0].Life();
+  aa[1].Life();
+  a.choonsikmove();
+  a.choonsikshow();
+  b.choonsikmove3();
+  b.choonsikshow();
+    a1.move();
+  a1.lionlion();
+  b1.move();
+  b1.lionlion();
+  c.move2();
+  c.lionlion();
+}
