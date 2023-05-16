@@ -1,0 +1,48 @@
+class lion {
+  lion() {
+    x = random(0,width);
+    y = random(0,height);
+    s = random(100,200);
+    vx = random(-3,3); vy = random(-2,2);
+  };
+  lion(float p,float q,float r){
+    x = p; y = q; s = r;
+    vx = random(-3,3); vy = random(-2,2);
+  }
+  float x, y, s, vx, vy;
+  void move(){
+    x += vx;
+    y += vy;
+    if(x> width) vx=-vx;
+    if(x<0) x=width;
+    if(y>height) vy=-vy;
+    if(y<0) y= height;
+  }
+  void move2(){
+    if (key == 'a') {x-=10;key=0;}
+    else if (key == 'd') {x+=10;key=0;}
+    else if (key == 'w') {y-=10;key=0;}
+    else if (key == 's') {y+=10;key=0;}
+  }
+  void move3(){
+    x = mouseX;
+    y = mouseY;
+  }
+  void lionlion(){
+  noStroke();
+  fill(204,130,0);
+  circle(x,y,s);
+  circle(x+0.35*s,y-0.35*s,0.167*s);
+  circle(x-0.35*s,y-0.35*s,0.167*s);
+  fill(0,0,0);
+  circle(x,y+0.05*s,0.06*s);
+  circle(x+0.2*s,y-0.1*s,0.04*s);
+  circle(x-0.2*s,y-0.1*s,0.04*s);
+  fill(255,255,255);
+  circle(x+0.04*s,y+0.1*s,0.1*s);
+  circle(x-0.04*s,y+0.1*s,0.1*s);
+  fill(0,0,0);
+  rect(x-0.26*s,y-0.18*s,0.1*s,0.015*s); 
+  rect(x+0.15*s,y-0.18*s,0.1*s,0.015*s);
+  }
+}
